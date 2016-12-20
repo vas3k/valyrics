@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="TodayViewController" customModule="widget" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+                <outlet property="widgetArtistLabel" destination="HRj-mj-P9p" id="VPn-dn-Nyz"/>
+                <outlet property="widgetLyricsLabel" destination="ojk-5N-jbI" id="Rpf-U1-fE8"/>
+                <outlet property="widgetTitleLabel" destination="Z9y-vj-TNL" id="xYr-wA-8XI"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView simulatedAppContext="notificationCenter" translatesAutoresizingMaskIntoConstraints="NO" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="Z9y-vj-TNL">
+                    <rect key="frame" x="2" y="59" width="316" height="26"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="--" id="vJd-cc-km4">
+                        <font key="font" metaFont="system" size="18"/>
+                        <color key="textColor" white="0.0" alpha="0.84999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="HRj-mj-P9p">
+                    <rect key="frame" x="2" y="40" width="316" height="19"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="BeU-bj-RT6">
+                        <font key="font" metaFont="system" size="16"/>
+                        <color key="textColor" white="0.5" alpha="0.84999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ojk-5N-jbI">
+                    <rect key="frame" x="2" y="0.0" width="316" height="32"/>
+                    <textFieldCell key="cell" selectable="YES" continuous="YES" sendsActionOnEndEditing="YES" alignment="center" title="Loading..." id="4VD-c4-B5A">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" white="0.052176339285714288" alpha="0.84999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ojk-5N-jbI" secondAttribute="bottom" id="A9T-9Y-nLf"/>
+                <constraint firstItem="Z9y-vj-TNL" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="4" id="Oxe-2z-uQZ"/>
+                <constraint firstItem="Z9y-vj-TNL" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="PMJ-MM-7F3"/>
+                <constraint firstItem="ojk-5N-jbI" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="53" id="Tic-TM-jUU"/>
+                <constraint firstAttribute="trailing" secondItem="Z9y-vj-TNL" secondAttribute="trailing" constant="4" id="Tmp-gU-VIl"/>
+                <constraint firstAttribute="width" constant="320" id="ZHk-pQ-PFm"/>
+                <constraint firstItem="ojk-5N-jbI" firstAttribute="top" secondItem="HRj-mj-P9p" secondAttribute="bottom" constant="8" id="a50-3i-NJD"/>
+                <constraint firstItem="HRj-mj-P9p" firstAttribute="top" secondItem="Z9y-vj-TNL" secondAttribute="bottom" id="cWx-bY-bTJ"/>
+                <constraint firstItem="HRj-mj-P9p" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="4" id="dqy-Lx-oE1"/>
+                <constraint firstItem="ojk-5N-jbI" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="4" id="gbI-0P-VeB"/>
+                <constraint firstAttribute="trailing" secondItem="HRj-mj-P9p" secondAttribute="trailing" constant="4" id="iZU-gf-gkI"/>
+                <constraint firstAttribute="trailing" secondItem="ojk-5N-jbI" secondAttribute="trailing" constant="4" id="tNy-jy-tLC"/>
+                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="85" id="vca-DO-J7U"/>
+            </constraints>
+            <point key="canvasLocation" x="99" y="-54.5"/>
+        </customView>
+    </objects>
+</document>

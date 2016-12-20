@@ -9,10 +9,35 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>widget.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>730044B71DECE36E0045B0A3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>7327AE6C1DD789B0000298F8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7361131A1DECDE94008737CF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>737BDFE01DD7A74F00877F23</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>737BDFFF1DD89B5000877F23</key>
 		<dict>
 			<key>primary</key>
 			<true/>
