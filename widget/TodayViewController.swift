@@ -34,8 +34,11 @@ class TodayViewController: NSViewController, NCWidgetProviding {
     override var nibName: String? {
         return "TodayViewController"
     }
+   
+   var completionHandler: ((NCUpdateResult) -> Void)?
 
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
+        self.completionHandler = completionHandler
         let services = [self.checkSpotifyScript, self.checkITunesScript]
         var isRunning = false
         
@@ -92,4 +95,8 @@ class TodayViewController: NSViewController, NCWidgetProviding {
             completionHandler(.newData)
         }
     }
+   
+   @IBAction func didClickReloadButton(_ sender: NSButton) {
+      widgetPerformUpdate(completionHandler: self.completionHandler!)
+   }
 }
