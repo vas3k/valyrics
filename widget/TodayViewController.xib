@@ -20,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="752" verticalCompressionResistancePriority="749" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="26" translatesAutoresizingMaskIntoConstraints="NO" id="Z9y-vj-TNL">
-                    <rect key="frame" x="2" y="53" width="316" height="26"/>
+                    <rect key="frame" x="2" y="84" width="316" height="26"/>
                     <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="--" id="vJd-cc-km4">
                         <font key="font" metaFont="system" size="18"/>
                         <color key="textColor" white="0.0" alpha="0.84999999999999998" colorSpace="calibratedWhite"/>
@@ -28,7 +28,7 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="HRj-mj-P9p">
-                    <rect key="frame" x="2" y="34" width="316" height="19"/>
+                    <rect key="frame" x="2" y="65" width="316" height="19"/>
                     <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" id="BeU-bj-RT6">
                         <font key="font" metaFont="system" size="16"/>
                         <color key="textColor" white="0.5" alpha="0.84999999999999998" colorSpace="calibratedWhite"/>
@@ -36,7 +36,7 @@
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ojk-5N-jbI">
-                    <rect key="frame" x="2" y="0.0" width="316" height="26"/>
+                    <rect key="frame" x="2" y="0.0" width="316" height="28"/>
                     <textFieldCell key="cell" selectable="YES" continuous="YES" sendsActionOnEndEditing="YES" alignment="center" title="Loading..." id="4VD-c4-B5A">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" white="0.052176339285714288" alpha="0.84999999999999998" colorSpace="calibratedWhite"/>
@@ -44,7 +44,7 @@
                     </textFieldCell>
                 </textField>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QIx-Zy-7Ao">
-                    <rect key="frame" x="120" y="82" width="82" height="32"/>
+                    <rect key="frame" x="119" y="29" width="82" height="32"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="70" id="74p-5x-lUM"/>
                         <constraint firstAttribute="height" constant="21" id="Pyc-vb-rgj"/>
@@ -60,22 +60,21 @@
             </subviews>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="ojk-5N-jbI" secondAttribute="bottom" id="A9T-9Y-nLf"/>
-                <constraint firstItem="ojk-5N-jbI" firstAttribute="top" secondItem="HRj-mj-P9p" secondAttribute="bottom" constant="8" id="JBw-wu-XQD"/>
-                <constraint firstAttribute="trailing" secondItem="QIx-Zy-7Ao" secondAttribute="trailing" constant="124" id="OQu-UX-2e1"/>
                 <constraint firstItem="Z9y-vj-TNL" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="4" id="Oxe-2z-uQZ"/>
                 <constraint firstAttribute="trailing" secondItem="Z9y-vj-TNL" secondAttribute="trailing" constant="4" id="Tmp-gU-VIl"/>
-                <constraint firstItem="Z9y-vj-TNL" firstAttribute="top" secondItem="QIx-Zy-7Ao" secondAttribute="bottom" constant="10" id="UuJ-EG-wRP"/>
-                <constraint firstItem="QIx-Zy-7Ao" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="Y4s-gc-Kc8"/>
                 <constraint firstAttribute="width" constant="320" id="ZHk-pQ-PFm"/>
                 <constraint firstItem="HRj-mj-P9p" firstAttribute="top" secondItem="Z9y-vj-TNL" secondAttribute="bottom" id="cWx-bY-bTJ"/>
+                <constraint firstItem="QIx-Zy-7Ao" firstAttribute="top" secondItem="HRj-mj-P9p" secondAttribute="bottom" constant="8" id="dk7-wm-yNL"/>
                 <constraint firstItem="HRj-mj-P9p" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="4" id="dqy-Lx-oE1"/>
+                <constraint firstItem="QIx-Zy-7Ao" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="fs1-Uc-5c4"/>
                 <constraint firstItem="ojk-5N-jbI" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="4" id="gbI-0P-VeB"/>
                 <constraint firstAttribute="trailing" secondItem="HRj-mj-P9p" secondAttribute="trailing" constant="4" id="iZU-gf-gkI"/>
-                <constraint firstItem="QIx-Zy-7Ao" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="126" id="lwf-BM-wJ0"/>
+                <constraint firstItem="Z9y-vj-TNL" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="m7Z-kh-hm5"/>
                 <constraint firstAttribute="trailing" secondItem="ojk-5N-jbI" secondAttribute="trailing" constant="4" id="tNy-jy-tLC"/>
                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="110" id="vca-DO-J7U"/>
+                <constraint firstItem="ojk-5N-jbI" firstAttribute="top" secondItem="QIx-Zy-7Ao" secondAttribute="bottom" constant="8" id="w4w-ow-EIH"/>
             </constraints>
-            <point key="canvasLocation" x="99" y="-72.5"/>
+            <point key="canvasLocation" x="99" y="-73"/>
         </customView>
     </objects>
 </document>
