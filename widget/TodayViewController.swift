@@ -21,12 +21,9 @@ class TodayViewController: NSViewController, NCWidgetProviding {
         "on getCurrentlyPlayingTrack() \n" +
             "if application \"iTunes\" is running then \n" +
                 "tell application \"iTunes\" \n" +
-                    "if exists name of current track then \n" +
-                        "set iTrack to the current track \n" +
-                        "set currentTrack to the name of iTrack \n" +
-                        "set currentArtist to the artist of iTrack \n" +
-                        "return currentArtist & \"<<|asn|>>\" & currentTrack \n" +
-                    "end if \n" +
+                    "set currentArtist to the artist of the current track \n" +
+                    "set currentTitle to the name of the current track \n" +
+                    "return currentArtist & \"<<|asn|>>\" & currentTitle \n" +
                 "end tell \n" +
             "end if \n" +
         "end getCurrentlyPlayingTrack"

@@ -3,12 +3,9 @@ set currentlyPlayingTrack to getCurrentlyPlayingTrack()
 on getCurrentlyPlayingTrack()
     if application "iTunes" is running then
         tell application "iTunes"
-            if exists name of current track then
-                set iTrack to the current track
-                set currentTrack to the name of iTrack
-                set currentArtist to the artist of iTrack
-                return currentArtist & "<<|asn|>>" & currentTrack
-            end if
+            set currentArtist to the artist of the current track
+            set currentTitle to the name of the current track
+            return currentArtist & "<<|asn|>>" & currentTitle
         end tell
     end if
 end getCurrentlyPlayingTrack
