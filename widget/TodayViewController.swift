@@ -6,28 +6,6 @@ class TodayViewController: NSViewController, NCWidgetProviding {
     @IBOutlet weak var widgetArtistLabel: NSTextField!
     @IBOutlet weak var widgetLyricsLabel: NSTextField!
     
-    let checkSpotifyScript = "set currentlyPlayingTrack to getCurrentlyPlayingTrack() \n" +
-        "on getCurrentlyPlayingTrack() \n" +
-            "if application \"Spotify\" is running then \n" +
-                "tell application \"Spotify\" \n" +
-                    "set currentArtist to artist of current track as string \n" +
-                    "set currentTrack to name of current track as string \n" +
-                    "return currentArtist & \"<<|asn|>>\" & currentTrack \n" +
-                "end tell \n" +
-            "end if \n" +
-        "end getCurrentlyPlayingTrack"
-    
-    let checkITunesScript = "set currentlyPlayingTrack to getCurrentlyPlayingTrack() \n" +
-        "on getCurrentlyPlayingTrack() \n" +
-            "if application \"iTunes\" is running then \n" +
-                "tell application \"iTunes\" \n" +
-                    "set currentArtist to the artist of the current track \n" +
-                    "set currentTitle to the name of the current track \n" +
-                    "return currentArtist & \"<<|asn|>>\" & currentTitle \n" +
-                "end tell \n" +
-            "end if \n" +
-        "end getCurrentlyPlayingTrack"
-    
     override var nibName: String? {
         return "TodayViewController"
     }
@@ -35,8 +13,11 @@ class TodayViewController: NSViewController, NCWidgetProviding {
    var completionHandler: ((NCUpdateResult) -> Void)?
 
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
+        let checkITunesScript = try! String(contentsOfFile: Bundle(for: type(of: self)).path(forResource: "itunes", ofType: "scpt")!)
+        let checkSpotifyScript = try! String(contentsOfFile: Bundle(for: type(of: self)).path(forResource: "spotify", ofType: "scpt")!)
+
         self.completionHandler = completionHandler
-        let services = [self.checkSpotifyScript, self.checkITunesScript]
+        let services = [checkSpotifyScript, checkITunesScript]
         var isRunning = false
         
         for service in services {
