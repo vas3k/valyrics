@@ -176,9 +176,9 @@
                                         </connections>
                                     </segmentedControl>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4F-SE-mld">
-                                        <rect key="frame" x="22" y="478" width="31" height="14"/>
+                                        <rect key="frame" x="8" y="478" width="56" height="14"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="v. 1.4" id="twf-28-TAF">
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="auto" id="twf-28-TAF">
                                             <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -190,6 +190,7 @@
                     </view>
                     <connections>
                         <outlet property="alignmentControl" destination="Ecx-dp-SyQ" id="kJ1-eW-m0y"/>
+                        <outlet property="versionField" destination="twf-28-TAF" id="HzT-mm-Hym"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
