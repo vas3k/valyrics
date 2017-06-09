@@ -2,9 +2,12 @@ import Cocoa
 
 class ViewController: NSViewController {
     @IBOutlet weak var alignmentControl: NSSegmentedControl!
+    @IBOutlet weak var versionField: NSTextFieldCell!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        versionField.title = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
     }
     
     override func viewDidAppear() {
